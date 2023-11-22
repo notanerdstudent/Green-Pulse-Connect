@@ -44,18 +44,15 @@ Before you begin, ensure you have the following prerequisites installed on your 
 
     Update the .env file with your database credentials:
 
-        ```
         DB_CONNECTION=mysql
         DB_HOST=127.0.0.1
         DB_PORT=3306
         DB_DATABASE=your_database
         DB_USERNAME=your_username
         DB_PASSWORD=your_password
-        ```
 
     Update the .env file with your mail settings:
 
-        ```
         MAIL_MAILER=smtp
         MAIL_HOST=mailpit
         MAIL_PORT=1025
@@ -64,21 +61,21 @@ Before you begin, ensure you have the following prerequisites installed on your 
         MAIL_ENCRYPTION=null
         MAIL_FROM_ADDRESS="hello@example.com"
         MAIL_FROM_NAME="${APP_NAME}"
-        ```
+    
 
-5.  **Generate an application key:**
+6.  **Generate an application key:**
 
     ```bash
     php artisan key:generate
     ```
 
-6.  **Run the database migrations and seed data:**
+7.  **Run the database migrations and seed data:**
 
     ```bash
     php artisan migrate --seed
     ```
 
-7.  **Start the development server:**
+8.  **Start the development server:**
 
     ```bash
     php artisan serve
