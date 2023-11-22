@@ -82,4 +82,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(BusinessListing::class, 'user_id', 'id');
     }
+
+    public function productReviews()
+    {
+        return $this->hasMany(ProductReviews::class, 'user_id', 'id');
+    }
 }

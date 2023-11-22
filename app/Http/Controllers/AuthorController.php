@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BusinessListing;
 use App\Models\Post;
+use App\Models\ProductReviews;
 use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -319,6 +320,154 @@ class AuthorController extends Controller
             return response()->json(['status' => 1, 'msg' => 'Listing has been updated successfully.']);
         } else {
             return response()->json(['status' => 0, 'msg' => 'Something went wrong while updating the listing.']);
+        }
+    }
+
+    // Product Reviews
+    public function createProduct(Request $request)
+    {
+        $request->validate([
+            'product_name' => 'required|unique:product_reviews,product_name',
+            'post_content' => 'required',
+            'brand' => 'required',
+            'purchase_url' => 'required',
+            'product_rating' => 'required',
+            'product_image' => 'required|image|mimes:jpg,jpeg,png|max:1024',
+        ]);
+
+        $path = 'images/product_images/';
+        $file = $request->file('product_image');
+        $filename = $file->getClientOriginalName();
+        $new_filename = time() . '_' . auth('web')->id() . '_' . $filename;
+
+        if ($request->hasFile('product_image')) {
+            $upload = Storage::disk('public')->put($path . $new_filename, (string) file_get_contents($file));
+
+            $post_thumbnails_path = $path . 'thumbnails';
+            if (!Storage::disk('public')->exists($post_thumbnails_path)) {
+                Storage::disk('public')->makeDirectory($post_thumbnails_path, 0755, true, true);
+            }
+            $thumb_img = Image::make($file);
+            $thumb_img->fit(200, 200)->save(storage_path('app/public/' . $path . 'thumbnails/' . 'thumb_' . $new_filename));
+
+            $thumb_img->fit(500, 350)->save(storage_path('app/public/' . $path . 'thumbnails/' . 'resized_' . $new_filename));
+            if ($upload) {
+                $product = new ProductReviews();
+                $product->user_id = auth('web')->id();
+                $product->product_name = $request->product_name;
+                $product->product_image = $new_filename;
+                $product->rating = $request->product_rating;
+                $product->review = $request->post_content;
+                $product->brand = $request->brand;
+                $product->purchase_url = $request->purchase_url;
+                $saved = $product->save();
+
+                if ($saved) {
+                    return response()->json(['status' => 1, 'msg' => 'Post has been created successfully.']);
+                } else {
+                    return response()->json(['status' => 0, 'msg' => 'Something went wrong while creating the post.']);
+                }
+            } else {
+                return response()->json(['status' => 0, 'msg' => 'Something went wrong while uploading the featured image.']);
+            }
+        }
+    }
+
+    public function editProduct()
+    {
+        if (!request()->product_id) {
+            return abort(404);
+        } else {
+            $product = ProductReviews::find(request()->product_id);
+            $data = [
+                'product' => $product,
+                'pageTitle' => 'Edit Product'
+            ];
+            return view('backend.pages.edit-product', $data);
+        }
+    }
+
+    public function updateProduct(Request $request)
+    {
+        if ($request->hasFile('product_image')) {
+            $request->validate([
+                'product_name' => 'required|unique:product_reviews,product_name,' . $request->product_id,
+                'post_content' => 'required',
+                'brand' => 'required',
+                'purchase_url' => 'required',
+                'product_rating' => 'required',
+                'product_image' => 'required|image|mimes:jpg,jpeg,png|max:1024',
+            ]);
+
+            $path = "images/product_images/";
+            $file = $request->file('product_image');
+            $filename = $file->getClientOriginalName();
+            $new_filename = time() . '_' . auth('web')->id() . '_' . $filename;
+
+            $upload = Storage::disk('public')->put($path . $new_filename, (string) file_get_contents($file));
+
+            $post_thumbnails_path = $path . 'thumbnails';
+            if (!Storage::disk('public')->exists($post_thumbnails_path)) {
+                Storage::disk('public')->makeDirectory($post_thumbnails_path, 0755, true, true);
+            }
+
+            $thumb_img = Image::make($file);
+            $thumb_img->fit(200, 200)->save(storage_path('app/public/' . $path . 'thumbnails/' . 'thumb_' . $new_filename));
+
+            $thumb_img->fit(500, 350)->save(storage_path('app/public/' . $path . 'thumbnails/' . 'resized_' . $new_filename));
+
+            if ($upload) {
+                $old_post_image = Post::find($request->post_id)->getAttributes()['product_image'];
+                if ($old_post_image != null && Storage::disk('public')->exists($path . $old_post_image)) {
+                    Storage::disk('public')->delete($path . $old_post_image);
+
+                    if (Storage::disk('public')->exists($path . 'thumbnails/thumb_' . $old_post_image)) {
+                        Storage::disk('public')->delete($path . 'thumbnails/thumb_' . $old_post_image);
+                    }
+
+                    if (Storage::disk('public')->exists($path . 'thumbnails/resized_' . $old_post_image)) {
+                        Storage::disk('public')->delete($path . 'thumbnails/resized_' . $old_post_image);
+                    }
+                }
+                $product = ProductReviews::find($request->post_id);
+                $product->product_name = $request->product_name;
+                $product->product_image = $new_filename;
+                $product->rating = $request->product_rating;
+                $product->review = $request->post_content;
+                $product->brand = $request->brand;
+                $product->purchase_url = $request->purchase_url;
+                $saved = $product->save();
+
+                if ($saved) {
+                    return response()->json(['status' => 1, 'msg' => 'Product has been updated successfully.']);
+                } else {
+                    return response()->json(['status' => 0, 'msg' => 'Something went wrong while updating the product.']);
+                }
+            } else {
+                return response()->json(['status' => 0, 'msg' => 'Something went wrong while uploading the featured image.']);
+            }
+        } else {
+            $request->validate([
+                'product_name' => 'required|unique:product_reviews,product_name,' . $request->product_id,
+                'post_content' => 'required',
+                'brand' => 'required',
+                'purchase_url' => 'required',
+                'product_rating' => 'required',
+            ]);
+
+            $product = ProductReviews::find($request->product_id);
+            $product->product_name = $request->product_name;
+            $product->rating = $request->product_rating;
+            $product->review = $request->post_content;
+            $product->brand = $request->brand;
+            $product->purchase_url = $request->purchase_url;
+            $saved = $product->save();
+
+            if ($saved) {
+                return response()->json(['status' => 1, 'msg' => 'Product has been updated successfully.']);
+            } else {
+                return response()->json(['status' => 0, 'msg' => 'Something went wrong while updating the product.']);
+            }
         }
     }
 }

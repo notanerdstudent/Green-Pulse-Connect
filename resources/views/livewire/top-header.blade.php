@@ -140,14 +140,14 @@
                   <div class="dropdown-menu">
                     <div class="dropdown-menu-columns">
                       <div class="dropdown-menu-column">
-                        <a class="dropdown-item" href="{{route('author.business.all-business')}}">
+                        <a class="dropdown-item" href="{{route('author.products.all-products')}}">
                           @if (auth()->user()->type == 1)
-                            All Listings
+                            All Products
                           @else
-                            My Listings
+                            My Products
                           @endif
                         </a>
-                        <a class="dropdown-item" href="{{route('author.business.add-business')}}">
+                        <a class="dropdown-item" href="{{route('author.products.add-product')}}">
                           Add New
                           <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
                         </a>

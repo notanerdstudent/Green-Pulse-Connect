@@ -90,7 +90,7 @@ class AllPosts extends Component
             }
 
             if (Storage::disk('public')->exists($path . 'thumbnails/thumb_' . $featured_image)) {
-                Storage::disk('public')->delete($path . 'thumbnails/thum_' . $featured_image);
+                Storage::disk('public')->delete($path . 'thumbnails/thumb_' . $featured_image);
             }
         }
 
