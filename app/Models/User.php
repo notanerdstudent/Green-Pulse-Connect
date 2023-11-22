@@ -77,4 +77,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class, 'author_id', 'id');
     }
+
+    public function businessListings()
+    {
+        return $this->hasMany(BusinessListing::class, 'user_id', 'id');
+    }
 }

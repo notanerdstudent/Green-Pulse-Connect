@@ -6,7 +6,7 @@
           </button>
           <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
             <a href="{{route('author.home')}}">
-              <img src="{{\App\Models\Setting::find(1)->blog_logo}}"  height="64" alt="Tabler">
+              <img src="{{\App\Models\Setting::find(1)->blog_logo}}"  height="56" alt="Tabler">
             </a>
           </h1>
           <div class="navbar-nav flex-row order-md-last">
@@ -42,22 +42,34 @@
             <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
               <ul class="navbar-nav">
                 
-                @if (auth()->user()->type == 1)
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{route('author.categories')}}" >
-                      <span class="nav-link-title">
-                        Blog Menus & Categories
-                      </span>
-                    </a>
-                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('home')}}" >
+                    <span class="nav-link-title">
+                      Home
+                    </span>
+                  </a>
+                </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{route('author.forum-categories')}}" >
-                      <span class="nav-link-title">
-                        Forum Categories
-                      </span>
-                    </a>
-                  </li>
+                @if (auth()->user()->type == 1)
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                    <span class="nav-link-title">
+                      Categories
+                    </span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-menu-columns">
+                      <div class="dropdown-menu-column">
+                        <a class="dropdown-item" href="{{route('author.categories')}}" >
+                            Blog Categories
+                        </a>
+                        <a class="dropdown-item" href="{{route('author.forum-categories')}}" >
+                            Forum Categories
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
     
                   <li class="nav-item">
                     <a class="nav-link" href="{{route('author.authors')}}" >
@@ -78,22 +90,88 @@
                   <div class="dropdown-menu">
                     <div class="dropdown-menu-columns">
                       <div class="dropdown-menu-column">
-                        <a class="dropdown-item" href="{{route('author.posts.add-post')}}">
-                          Add New
-                        </a>
                         <a class="dropdown-item" href="{{route('author.posts.all-posts')}}">
                           @if (auth()->user()->type == 1)
                             All Posts
                           @else
                             My Posts
                           @endif
+                        </a>
+                        <a class="dropdown-item" href="{{route('author.posts.add-post')}}">
+                          Add New
                           <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
                         </a>
-                        
                       </div>
                     </div>
                   </div>
                 </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                    <span class="nav-link-title">
+                      Business Directory
+                    </span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-menu-columns">
+                      <div class="dropdown-menu-column">
+                        <a class="dropdown-item" href="{{route('author.business.all-business')}}">
+                          @if (auth()->user()->type == 1)
+                            All Listings
+                          @else
+                            My Listings
+                          @endif
+                        </a>
+                        <a class="dropdown-item" href="{{route('author.business.add-business')}}">
+                          Add New
+                          <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                    <span class="nav-link-title">
+                      Eco-Friendly Products
+                    </span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-menu-columns">
+                      <div class="dropdown-menu-column">
+                        <a class="dropdown-item" href="{{route('author.business.all-business')}}">
+                          @if (auth()->user()->type == 1)
+                            All Listings
+                          @else
+                            My Listings
+                          @endif
+                        </a>
+                        <a class="dropdown-item" href="{{route('author.business.add-business')}}">
+                          Add New
+                          <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('blog')}}" >
+                    <span class="nav-link-title">
+                      Blog
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('forum.index')}}" >
+                    <span class="nav-link-title">
+                      Forum
+                    </span>
+                  </a>
+                </li>
+                
               </ul>
             </div>
           </div>

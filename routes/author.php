@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('author')->name('author.')->group(function () {
     Route::middleware(['guest:web'])->group(function () {
         Route::view('/login', 'backend.pages.auth.login')->name('login');
+        Route::view('/signup', 'backend.pages.auth.signup')->name('signup');
         Route::view('forgot-password', 'backend.pages.auth.forgot')->name('forgot-password');
         Route::get('/password/reset/{token}', [AuthorController::class, 'resetForm'])->name('reset-form');
     });
@@ -42,6 +43,22 @@ Route::prefix('author')->name('author.')->group(function () {
             Route::view('/all', 'backend.pages.all_posts')->name('all-posts');
             Route::get('/edit-post', [AuthorController::class, 'editPost'])->name('edit-post');
             Route::post('/update-post', [AuthorController::class, 'updatePost'])->name('update-post');
+        });
+
+        Route::prefix('business')->name('business.')->group(function () {
+            Route::view('/add-business', 'backend.pages.add-business')->name('add-business');
+            Route::post('/create', [AuthorController::class, 'createBusiness'])->name('create');
+            Route::view('/all', 'backend.pages.all_business')->name('all-business');
+            Route::get('/edit-business', [AuthorController::class, 'editBusiness'])->name('edit-business');
+            Route::post('/update-business', [AuthorController::class, 'updateBusiness'])->name('update-business');
+        });
+
+        Route::prefix('products')->name('products.')->group(function () {
+            Route::view('/add-product', 'backend.pages.add-product')->name('add-product');
+            Route::post('/create', [AuthorController::class, 'createProduct'])->name('create');
+            Route::view('/all', 'backend.pages.all_products')->name('all-products');
+            Route::get('/edit-product', [AuthorController::class, 'editProduct'])->name('edit-product');
+            Route::post('/update-product', [AuthorController::class, 'updateProduct'])->name('update-product');
         });
     });
 });

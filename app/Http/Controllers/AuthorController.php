@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BusinessListing;
 use App\Models\Post;
 use App\Models\Setting;
 use App\Models\User;
@@ -208,7 +209,6 @@ class AuthorController extends Controller
                 $post = Post::find($request->post_id);
                 $post->category_id = $request->post_category;
                 $post->post_title = $request->post_title;
-                $post->post_slug = null;
                 $post->post_content = $request->post_content;
                 $post->featured_image = $new_filename;
                 $post->post_tags = $request->post_tags;
@@ -242,6 +242,83 @@ class AuthorController extends Controller
             } else {
                 return response()->json(['status' => 0, 'msg' => 'Something went wrong while updating the post.']);
             }
+        }
+    }
+
+    // Business Listings
+
+    public function createBusiness(Request $request)
+    {
+        $request->validate([
+            'listing_title' => 'required|unique:business_listings,name',
+            'listing_content' => 'required',
+            'listing_location' => 'required',
+            'listing_website' => 'required',
+            'listing_email' => 'required',
+            'listing_is_offline' => 'required',
+            'listing_phone' => 'required',
+        ]);
+
+        $listing = new BusinessListing();
+        $listing->user_id = auth('web')->id();
+        $listing->name = $request->listing_title;
+        $listing->details = $request->listing_content;
+        $listing->location = $request->listing_location;
+        $listing->website = $request->listing_website;
+        $listing->email = $request->listing_email;
+        $listing->is_offline = $request->listing_is_offline;
+        $listing->phone = $request->listing_phone;
+        $saved = $listing->save();
+
+        if ($saved) {
+            return response()->json(['status' => 1, 'msg' => 'Business Listing has been created successfully.']);
+        } else {
+            return response()->json(['status' => 0, 'msg' => 'Something went wrong while creating the post.']);
+        }
+    }
+
+    public function editBusiness()
+    {
+        if (!request()->listing_id) {
+            return abort(404);
+        } else {
+            $listing = BusinessListing::find(request()->listing_id);
+            $data = [
+                'listing' => $listing,
+                'pageTitle' => 'Edit Business Listing'
+            ];
+            return view('backend.pages.edit-business', $data);
+        }
+    }
+
+    public function updateBusiness(Request $request)
+    {
+        $request->validate([
+            'listing_title' => 'required|unique:business_listings,name,' . $request->post_id,
+            'listing_content' => 'required',
+            'listing_location' => 'required',
+            'listing_website' => 'required',
+            'listing_email' => 'required',
+            'listing_is_offline' => 'required',
+            'listing_phone' => 'required',
+        ]);
+
+        $listing = BusinessListing::find($request->listing_id);
+        $listing->name = $request->listing_title;
+        $listing->details = $request->listing_content;
+        $listing->location = $request->listing_location;
+        $listing->website = $request->listing_website;
+        $listing->email = $request->listing_email;
+        $listing->is_offline = $request->listing_is_offline;
+        $listing->phone = $request->listing_phone;
+        $listing->slug = null;
+        $saved = $listing->save();
+
+
+        if ($saved) {
+            return response()->json(['status' => 1, 'msg' => 'Listing has been updated successfully.']);
+        } else {
+            return response()->json(['status' => 0, 'msg' => 'Something went wrong while updating the listing.']);
         }
     }
 }

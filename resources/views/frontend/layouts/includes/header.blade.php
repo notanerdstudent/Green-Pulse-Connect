@@ -17,20 +17,6 @@
           <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
             <li class="nav-item"> <a class="nav-link" href="{{route('home')}}">Home</a></li>
             <li class="nav-item dropdown"> 
-              <a class="nav-link dropdown-toggle" href="{{route('forum.index')}}" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Forum</a>
-                <div class="dropdown-menu"> 
-                  <a class="dropdown-item" href="{{route('forum.index')}}">Index</a>
-                  <a class="dropdown-item" href="{{route('forum.recent')}}">Recent Threads</a>
-                  @auth
-                    @if (auth()->user()->type == 1)
-                    <a class="dropdown-item" href="{{route('forum.unread')}}">{{trans('forum::threads.unread_updated')}}</a>
-                    @endif
-                  @endauth
-                </div>
-            </li>
-            <li class="nav-item dropdown"> 
               <a class="nav-link dropdown-toggle" href="{{route('blog')}}" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Blog</a>
@@ -51,6 +37,22 @@
                     @endforeach
                 </div>
             </li>
+            <li class="nav-item dropdown"> 
+              <a class="nav-link dropdown-toggle" href="{{route('forum.index')}}" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Forum</a>
+              <div class="dropdown-menu"> 
+                <a class="dropdown-item" href="{{route('forum.index')}}">Index</a>
+                <a class="dropdown-item" href="{{route('forum.recent')}}">Recent Threads</a>
+                @auth
+                @if (auth()->user()->type == 1)
+                <a class="dropdown-item" href="{{route('forum.unread')}}">{{trans('forum::threads.unread_updated')}}</a>
+                @endif
+                @endauth
+              </div>
+            </li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('business')}}">Businesses</a></li>
+            
             
             @if (Auth::check())
             <li class="nav-item"> <a class="nav-link" href="{{route('author.home')}}">Dashboard</a></li>

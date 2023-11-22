@@ -1,5 +1,5 @@
 @extends('backend.layouts.auth-layout')
-@section('pageTitle',isset($pageTitle) ? $pageTitle : 'Login')
+@section('pageTitle',isset($pageTitle) ? $pageTitle : 'Signup')
 @section('content')
 
 <div class="page page-center">
@@ -12,12 +12,12 @@
                     </div>
                     <div class="card card-md">
                         <div class="card-body">
-                            <h2 class="h2 text-center mb-4">Login to your account</h2>
-                             @livewire('author-login-form')
+                            <h2 class="h2 text-center mb-4">Signup to {{blogInfo()->blog_name}}</h2>
+                             @livewire('author-signup-form')
                         </div>
                     </div>
                     <div class="text-center text-muted mt-3">
-                        Don't have account yet? <a href="{{route('author.signup')}}" tabindex="-1" class="color-main">Sign up</a>
+                        Already have an account? <a href="{{route('author.login')}}" tabindex="-1" class="color-main">Login</a>
                     </div>
                 </div>
             </div>

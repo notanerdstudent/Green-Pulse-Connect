@@ -61,7 +61,7 @@
         <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-tree"></i></div>
-            <h4 class="title"><a href="" class="stretched-link">Green Business Directory</a></h4>
+            <h4 class="title"><a href="{{route('business')}}" class="stretched-link">Green Business Directory</a></h4>
           </div>
         </div><!--End Icon Box -->
 
@@ -130,8 +130,8 @@
         <div class="col-lg-6">
 
           <div class="stats-item d-flex align-items-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Happy Clients</strong> consequuntur quae diredo para mesta</p>
+            <span data-purecounter-start="0" data-purecounter-end="39.9" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Billion Tonnes of CO2</strong> generated through internet usage</p>
           </div><!-- End Stats Item -->
 
           <div class="stats-item d-flex align-items-center">
