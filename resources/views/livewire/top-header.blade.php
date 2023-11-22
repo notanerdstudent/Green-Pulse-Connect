@@ -94,22 +94,6 @@
                     </div>
                   </div>
                 </li>
-                {{-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
-                    <span class="nav-link-title">
-                      Settings
-                    </span>
-                  </a>
-                  <div class="dropdown-menu">
-                    <div class="dropdown-menu-columns">
-                      <div class="dropdown-menu-column">
-                        <a class="dropdown-item" href="./layout-horizontal.html">
-                          General Settings
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li> --}}
               </ul>
             </div>
           </div>

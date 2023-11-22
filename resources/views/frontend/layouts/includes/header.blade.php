@@ -23,6 +23,11 @@
                 <div class="dropdown-menu"> 
                   <a class="dropdown-item" href="{{route('forum.index')}}">Index</a>
                   <a class="dropdown-item" href="{{route('forum.recent')}}">Recent Threads</a>
+                  @auth
+                    @if (auth()->user()->type == 1)
+                    <a class="dropdown-item" href="{{route('forum.unread')}}">{{trans('forum::threads.unread_updated')}}</a>
+                    @endif
+                  @endauth
                 </div>
             </li>
             <li class="nav-item dropdown"> 
