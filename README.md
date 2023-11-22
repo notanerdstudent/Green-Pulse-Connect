@@ -44,7 +44,7 @@ Before you begin, ensure you have the following prerequisites installed on your 
 
     Update the .env file with your database credentials:
 
-        ```bash
+        ```
         DB_CONNECTION=mysql
         DB_HOST=127.0.0.1
         DB_PORT=3306
@@ -55,7 +55,7 @@ Before you begin, ensure you have the following prerequisites installed on your 
 
     Update the .env file with your mail settings:
 
-        ```bash
+        ```
         MAIL_MAILER=smtp
         MAIL_HOST=mailpit
         MAIL_PORT=1025
