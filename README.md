@@ -6,11 +6,6 @@ Explore a world of sustainable living through our diverse categories, from pract
 
 GreenPulseConnect isn't just a website; it's a vibrant community where ideas flourish, and actions speak louder than words. Join us on this journey of shared knowledge, inspiration, and collective empowerment as we pulse towards a sustainable, interconnected future. Together, let's amplify the heartbeat of positive change. Welcome to GreenPulseConnect!
 
-```bash
-  npm install my-project
-  cd my-project
-```
-
 ## Installation Guide
 
 ### Prerequisites
@@ -19,7 +14,6 @@ Before you begin, ensure you have the following prerequisites installed on your 
 
 -   [PHP](https://www.php.net/manual/en/install.php) (>= 8.1.0)
 -   [Composer](https://getcomposer.org/download/)
--   [Node.js](https://nodejs.org/en/download/) and [NPM](https://www.npmjs.com/get-npm)
 -   [MySQL](https://dev.mysql.com/downloads/mysql/) or any other database of your choice
 
 ### Installation Steps
