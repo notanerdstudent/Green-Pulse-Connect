@@ -61,18 +61,23 @@ Before you begin, ensure you have the following prerequisites installed on your 
         MAIL_ENCRYPTION=null
         MAIL_FROM_ADDRESS="hello@example.com"
         MAIL_FROM_NAME="${APP_NAME}"
-    
 
-6.  **Generate an application key:**
+5.  **Generate an application key:**
 
     ```bash
     php artisan key:generate
     ```
 
-7.  **Run the database migrations and seed data:**
+6.  **Run the database migrations and seed data:**
 
     ```bash
     php artisan migrate --seed
+    ```
+
+7.  **Link Storage**
+
+    ```bash
+    php artisan storage:link
     ```
 
 8.  **Start the development server:**
