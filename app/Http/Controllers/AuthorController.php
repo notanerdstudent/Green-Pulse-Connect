@@ -257,7 +257,7 @@ class AuthorController extends Controller
             'listing_website' => 'required',
             'listing_email' => 'required',
             'listing_is_offline' => 'required',
-            'listing_phone' => 'required',
+            'listing_phone' => 'required|min:10|max:10',
         ]);
 
         $listing = new BusinessListing();
@@ -301,7 +301,7 @@ class AuthorController extends Controller
             'listing_website' => 'required',
             'listing_email' => 'required',
             'listing_is_offline' => 'required',
-            'listing_phone' => 'required',
+            'listing_phone' => 'required|min:10|max:10',
         ]);
 
         $listing = BusinessListing::find($request->listing_id);

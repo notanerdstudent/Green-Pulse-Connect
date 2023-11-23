@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\BusinessListing;
 use App\Models\Setting;
 use App\Models\Post;
 use App\Models\Subcategory;
@@ -106,6 +107,13 @@ if (!function_exists('latest_sidebar_posts')) {
     }
 }
 
+// Sidebar Businesses
+if (!function_exists('latest_sidebar_businesses')) {
+    function latest_sidebar_businesses($except = null, $limit = 3)
+    {
+        return BusinessListing::where('id', '!=', $except)->limit($limit)->orderBy('created_at', 'desc')->get();
+    }
+}
 
 // Tags
 if (!function_exists('tags')) {
