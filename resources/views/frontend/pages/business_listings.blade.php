@@ -22,7 +22,7 @@
                   {!! Str::ucfirst(words($item->details, 25)) !!}
                 </p>
                 <div class="content">
-                  <a class="read-more-btn" href=""
+                  <a class="read-more-btn" href="{{route('business.show', $item->slug)}}"
                     >Read Full Description</a
                   >
                 </div>
