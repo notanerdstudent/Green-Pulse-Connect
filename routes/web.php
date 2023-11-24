@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,7 @@ Route::get('/search', [BlogController::class, 'searchBlog'])->name('search_posts
 // Business Listing Routes
 Route::get('/business', [BusinessController::class, 'index'])->name('business');
 Route::get('/business/{any}', [BusinessController::class, 'show'])->name('business.show');
+
+// Product Reviews Routes
+Route::get('/products', [ProductController::class, 'index'])->name('products');
+Route::get('/products/{any}', [ProductController::class, 'show'])->name('product.single');

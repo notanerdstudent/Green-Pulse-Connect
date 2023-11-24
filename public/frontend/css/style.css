@@ -824,7 +824,7 @@ a.post-title-sm:hover {
     border-radius: 100%;
     left: 0;
     top: 7px;
-    background-color: #13ae6f;
+    /* background-color: #13ae6f; */
     transition: 0.3s ease;
 }
 .content table {

@@ -1,7 +1,7 @@
 @extends('frontend.layouts.pages-layout')
 @section('pageTitle', isset($pageTitle) ? $pageTitle : 'Home')
 @push('stylesheets')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">    
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" integrity="sha512-T+KoG3fbDoSnlgEXFQqwcTC9AdkFIxhBlmoaFqYaIjq2ShhNwNao9AKaLUPMfwiBPL0ScxAtc+UYbHAgvd+sjQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link
@@ -81,36 +81,29 @@
 
       <div class="section-header">
         <h2>About Us</h2>
-        <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
       </div>
 
       <div class="row gy-4">
         <div class="col-lg-6">
-          <h3>Voluptatem dignissimos provident quasi corporis</h3>
+          <h3>Navigating the Sustainable Future</h3>
           <img src="/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
-          <p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.</p>
-          <p>Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique sit. Accusantium sed ut omnis beatae neque deleniti repellendus.</p>
+          <p>At GreenPulseConnect, we are driven by a collective passion for sustainability, innovation, and a deep commitment to fostering positive change in the world. Our platform serves as a dynamic hub, bringing together individuals, businesses, and communities dedicated to navigating a sustainable future.</p>
+          <p>We believe in the power of information and connection to drive meaningful change. GreenPulseConnect is not just a website; it's a movement. Our mission is to empower individuals and businesses to make eco-conscious choices, steering the world towards a more sustainable and harmonious existence.</p>
         </div>
         <div class="col-lg-6">
           <div class="content ps-0 ps-lg-5">
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              GreenPulseConnect stands out for its community-driven approach. Our Eco-Friendly Blog and Product Reviews are not just curated by us but are a tapestry of insights, experiences, and recommendations from our diverse community.
             </p>
             <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Join our vibrant community forum, where ideas flow freely, experiences are shared, and sustainable collaborations take root. Engage with eco-enthusiasts, businesses, and advocates actively shaping a sustainable tomorrow.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Explore businesses that align with sustainable values. Our Green Business Directory is a reflection of the community's choices, featuring enterprises committed to ethical practices and eco-friendly products and services.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Immerse yourself in our community-driven Eco-Friendly Blog. Authored by passionate individuals, it covers diverse topics—from personal eco-journeys to insights into sustainable practices. Share your story and inspire others!</li>
+              <li><i class="bi bi-check-circle-fill"></i> Navigate sustainable consumerism through our community's lens. Our Eco-Friendly Product Reviews are curated by individuals passionate about sustainability, providing real-world insights into the environmental impact of products.</li>
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+              <b><i>Together, let's navigate the sustainable future. Welcome to GreenPulseConnect — where positive change is woven into every community-authored post.</i></b>
             </p>
-
-            <div class="position-relative mt-4">
-              <img src="/img/about-2.jpg" class="img-fluid rounded-4" alt="">
-              <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
-            </div>
           </div>
         </div>
       </div>
@@ -130,18 +123,18 @@
         <div class="col-lg-6">
 
           <div class="stats-item d-flex align-items-center">
-            <span data-purecounter-start="0" data-purecounter-end="39.9" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Billion Tonnes of CO2</strong> generated through internet usage</p>
+            <span data-purecounter-start="0" data-purecounter-end="414" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Each <strong>internet user is responsible</strong> for 414kg (912lbs) of carbon dioxide a year.</p>
           </div><!-- End Stats Item -->
 
           <div class="stats-item d-flex align-items-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+            <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
+            <p>The carbon emissions of <strong>delivering online purchases</strong> are expected to grow 30% by 2030</p>
           </div><!-- End Stats Item -->
 
           <div class="stats-item d-flex align-items-center">
-            <span data-purecounter-start="0" data-purecounter-end="453" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+            <span data-purecounter-start="0" data-purecounter-end="1.7" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>The manufacture and running of digital technologies</strong> are estimated to produce 1.7 billion tonnes (1.6 billion tons) of greenhouse gas emissions.</p>
           </div><!-- End Stats Item -->
 
         </div>
@@ -154,10 +147,9 @@
   <!-- ======= Call To Action Section ======= -->
   <section id="call-to-action" class="call-to-action">
     <div class="container text-center" data-aos="zoom-out">
-      <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
-      <h3>Call To Action</h3>
-      <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <a class="cta-btn" href="#">Call To Action</a>
+      <h3>Call For Sustainable Development</h3>
+      <p>Sustainable development is crucial as it meets the needs of the present without compromising the ability of future generations to meet their own needs. It aims to achieve a balance between economic progress, environmental preservation, and social equity.</p>
+      <a class="cta-btn" href="https://www.undp.org/sustainable-development-goals">Sustainable Development Goals</a>
     </div>
   </section><!-- End Call To Action Section -->
 
@@ -166,8 +158,8 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>Our Services</h2>
-        <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
+        <h2>Global Sustainability News</h2>
+        <p>Stay informed about the latest developments in sustainable policies, technologies, and initiatives from around the world.</p>
       </div>
 
       <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
@@ -177,31 +169,53 @@
             <div class="icon">
               <i class="bi bi-activity"></i>
             </div>
-            <h3>Nesciunt Mete</h3>
-            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
-            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            <h3>10-Year Framework Programme on Sustainable Consumption and Production</h3>
+            <p> Supported by the Indian government, this programme focuses on promoting sustainable consumption and production patterns.</p>
+            <a href="https://www.oneplanetnetwork.org/about/10-year-framework-programmes-sustainable-consumption-production" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
           </div>
         </div><!-- End Service Item -->
 
         <div class="col-lg-4 col-md-6">
           <div class="service-item position-relative">
             <div class="icon">
-              <i class="bi bi-broadcast"></i>
+              <i class="bi bi-cloud-fog"></i>
             </div>
-            <h3>Eosle Commodi</h3>
-            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            <h3>Smog Free Project</h3>
+            <p>This is the world’s first smog vacuum cleaner that transforms air pollution into jewelry. It’s an innovative approach to tackle air pollution.</p>
+            <a href="https://www.studioroosegaarde.net/project/smog-free-tower" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
           </div>
         </div><!-- End Service Item -->
 
         <div class="col-lg-4 col-md-6">
           <div class="service-item position-relative">
             <div class="icon">
-              <i class="bi bi-easel"></i>
+              <i class="bi bi-sun"></i>
             </div>
-            <h3>Ledo Markt</h3>
-            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            <h3>Zéphyr Solar</h3>
+            <p>This is an autonomous solar balloon that provides electricity to disaster zones. It’s a sustainable technology that aids in disaster management.</p>
+            <a href="https://www.bbeb.com/post/102gy6y/zephyr-solar-an-autonomous-solar-balloon-bringing-electricity-to-disaster-zones" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-gear-wide-connected"></i>
+            </div>
+            <h3>UpLink</h3>
+            <p>An initiative by the World Economic Forum, UpLink seeks sustainable solutions to tackle issues such as climate change and social injustice.</p>
+            <a href="https://uplink.weforum.org/uplink/s/" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-hourglass"></i>
+            </div>
+            <h3>Green Building Initiative (GBI)</h3>
+            <p>This international effort aims to create sustainable, resource-efficient buildings. It promotes green building practices and reduces environmental impact.</p>
+            <a href="https://thegbi.org/" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
           </div>
         </div><!-- End Service Item -->
 
@@ -210,31 +224,9 @@
             <div class="icon">
               <i class="bi bi-bounding-box-circles"></i>
             </div>
-            <h3>Asperiores Commodit</h3>
-            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-calendar4-week"></i>
-            </div>
-            <h3>Velit Doloremque</h3>
-            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-chat-square-text"></i>
-            </div>
-            <h3>Dolori Architecto</h3>
-            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            <h3>National Action Plan on Climate Change (NAPCC)</h3>
+            <p>This is an overarching policy framework implemented by the Indian government. It aims to address climate change issues and promote sustainable development.</p>
+            <a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/dec/doc202112101.pdf" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
           </div>
         </div><!-- End Service Item -->
 
@@ -248,8 +240,8 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>Testimonials</h2>
-        <p>Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur est eveniet deleniti fignissimos eos quam</p>
+        <h2>Global Ecological Crisis</h2>
+        <p>Unraveling the Global Environmental Dilemmas - An Overview of Current Environmental Challenges</p>
       </div>
 
       <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
@@ -258,19 +250,9 @@
           <div class="swiper-slide">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
-                <div class="d-flex align-items-center">
-                  <img src="/img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0" alt="">
-                  <div>
-                    <h3>Saul Goodman</h3>
-                    <h4>Ceo &amp; Founder</h4>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <b>Land and Sea Use Changes:</b> The biggest driver of biodiversity loss is how people use the land and sea. This includes the conversion of land covers such as forests, wetlands, and other natural habitats for agricultural and urban uses.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -280,19 +262,9 @@
           <div class="swiper-slide">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
-                <div class="d-flex align-items-center">
-                  <img src="/img/testimonials/testimonials-2.jpg" class="testimonial-img flex-shrink-0" alt="">
-                  <div>
-                    <h3>Sara Wilsson</h3>
-                    <h4>Designer</h4>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <b>Nature Crisis:</b> We are experiencing a dangerous decline in nature, and humans are causing it. We are using the equivalent of 1.6 Earths to maintain our current way of life, and ecosystems cannot keep up with our demands. One million of the world’s estimated 8 million species of plants and animals are threatened with extinction.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -302,19 +274,9 @@
           <div class="swiper-slide">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
-                <div class="d-flex align-items-center">
-                  <img src="/img/testimonials/testimonials-3.jpg" class="testimonial-img flex-shrink-0" alt="">
-                  <div>
-                    <h3>Jena Karlis</h3>
-                    <h4>Store Owner</h4>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <b>Global Warming from Fossil Fuels:</b> As of May 2023, CO2 PPM (parts per million) is at 420.00 and the global temperature rise is 1.15C compared to pre-industrial levels. This is causing catastrophic events all over the world, such as devastating bushfire seasons, locust swarms decimating crops, and unprecedented heatwaves.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -324,19 +286,9 @@
           <div class="swiper-slide">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
-                <div class="d-flex align-items-center">
-                  <img src="/img/testimonials/testimonials-4.jpg" class="testimonial-img flex-shrink-0" alt="">
-                  <div>
-                    <h3>Matt Brandon</h3>
-                    <h4>Freelancer</h4>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore.
+                  <b>Poor Governance:</b> The climate crisis is a result of multiple market failures. Economists and environmentalists have urged policymakers for years to increase the price of activities that emit greenhouse gases. However, governments must not only massively increase funding for green innovation but also adopt a range of other policies that address each of the other market failures.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -346,19 +298,9 @@
           <div class="swiper-slide">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
-                <div class="d-flex align-items-center">
-                  <img src="/img/testimonials/testimonials-5.jpg" class="testimonial-img flex-shrink-0" alt="">
-                  <div>
-                    <h3>John Larson</h3>
-                    <h4>Entrepreneur</h4>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore.
+                  <b>Invasive Alien Species:</b> Invasive alien species (IAS) are animals, plants, fungi, and microorganisms that have entered and established themselves in the environment outside their natural habitat. IAS have devastating impacts on native plant and animal life, causing the decline or even extinction of native species and negatively affecting ecosystems.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -372,151 +314,8 @@
     </div>
   </section><!-- End Testimonials Section -->
 
-  <!-- ======= Our Team Section ======= -->
-  <section id="team" class="team">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-header">
-        <h2>Our Team</h2>
-        <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum</p>
-      </div>
-
-      <div class="row gy-4">
-
-        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-          <div class="member">
-            <img src="/img/team/team-1.jpg" class="img-fluid" alt="">
-            <h4>Walter White</h4>
-            <span>Web Development</span>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-          <div class="member">
-            <img src="/img/team/team-2.jpg" class="img-fluid" alt="">
-            <h4>Sarah Jhinson</h4>
-            <span>Marketing</span>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-          <div class="member">
-            <img src="/img/team/team-3.jpg" class="img-fluid" alt="">
-            <h4>William Anderson</h4>
-            <span>Content</span>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-          <div class="member">
-            <img src="/img/team/team-4.jpg" class="img-fluid" alt="">
-            <h4>Amanda Jepson</h4>
-            <span>Accountant</span>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-      </div>
-
-    </div>
-  </section><!-- End Our Team Section -->
-
-  <!-- ======= Pricing Section ======= -->
-  <section id="pricing" class="pricing sections-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-header">
-        <h2>Pricing</h2>
-        <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
-      </div>
-
-      <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">
-
-        <div class="col-lg-4">
-          <div class="pricing-item">
-            <h3>Free Plan</h3>
-            <div class="icon">
-              <i class="bi bi-box"></i>
-            </div>
-            <h4><sup>$</sup>0<span> / month</span></h4>
-            <ul>
-              <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-              <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-              <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-            </ul>
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="col-lg-4">
-          <div class="pricing-item featured">
-            <h3>Business Plan</h3>
-            <div class="icon">
-              <i class="bi bi-airplane"></i>
-            </div>
-
-            <h4><sup>$</sup>29<span> / month</span></h4>
-            <ul>
-              <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-              <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-              <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
-            </ul>
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="col-lg-4">
-          <div class="pricing-item">
-            <h3>Developer Plan</h3>
-            <div class="icon">
-              <i class="bi bi-send"></i>
-            </div>
-            <h4><sup>$</sup>49<span> / month</span></h4>
-            <ul>
-              <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-              <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-              <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
-            </ul>
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-      </div>
-
-    </div>
-  </section><!-- End Pricing Section -->
-
   <!-- ======= Frequently Asked Questions Section ======= -->
-  <section id="faq" class="faq">
+  <section id="faq" class="faq sections-bg">
     <div class="container" data-aos="fade-up">
 
       <div class="row gy-4">
@@ -525,7 +324,7 @@
           <div class="content px-xl-5">
             <h3>Frequently Asked <strong>Questions</strong></h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              This section provides answers to five frequently asked questions about sustainability and eco-friendliness, offering insights into the importance of these concepts and how they can be implemented in our daily lives. It serves as a quick guide for those interested in understanding and contributing to a sustainable future. 
             </p>
           </div>
         </div>
@@ -538,12 +337,12 @@
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
                   <span class="num">1.</span>
-                  Non consectetur a erat nam at lectus urna duis?
+                  What is sustainability?
                 </button>
               </h3>
               <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                 <div class="accordion-body">
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                  Sustainability comes from ‘to sustain’, which essentially means to provide support and prolong or preserve something. We hope to preserve and support life on planet earth. Sustainability is an approach to life that causes the least possible harm to the natural world or living organisms.
                 </div>
               </div>
             </div><!-- # Faq item-->
@@ -552,12 +351,12 @@
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
                   <span class="num">2.</span>
-                  Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                  Why is sustainability important?
                 </button>
               </h3>
               <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                 <div class="accordion-body">
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  The main goal of sustainability is to protect the planet so that future generations don’t have to suffer. We only have finite resources on this planet, but we’re currently not being considerate of that. Our actions now shouldn’t be at the expense of our fellow creatures or humans, so it’s important to be aware of sustainability in our daily lives so we don’t cause more irreparable damage to Earth.
                 </div>
               </div>
             </div><!-- # Faq item-->
@@ -566,12 +365,12 @@
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
                   <span class="num">3.</span>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                  What are the 3 pillars of sustainability?
                 </button>
               </h3>
               <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                 <div class="accordion-body">
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                  The three pillars of sustainability are the environment, economy, and society. All of them, directly and indirectly, impact each other – none of these pillars stand alone. This is why it’s important to consider everything when we’re talking about sustainability, from materials and wastage to human treatment and working conditions.
                 </div>
               </div>
             </div><!-- # Faq item-->
@@ -580,12 +379,12 @@
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
                   <span class="num">4.</span>
-                  Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                  What’s the difference between sustainability and eco-friendly?
                 </button>
               </h3>
               <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                 <div class="accordion-body">
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  Eco-friendly means ‘not environmentally harmful’. Everything from production, manufacturing, and packaging should be favorable and safe for the planet in terms of products. For a product to qualify as eco-friendly, the packaging process must be top-notch and environmentally responsible.
                 </div>
               </div>
             </div><!-- # Faq item-->
@@ -594,12 +393,12 @@
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
                   <span class="num">5.</span>
-                  Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                  How can we maintain an eco-friendly and sustainable environment?
                 </button>
               </h3>
               <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                 <div class="accordion-body">
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                  To help reduce footprint, considerable shifts in the way companies produce their products are a must-do thing. We, as consumers, on the other hand, need to revisit how we dispose of these products. That way, our planet will stand out more than before.
                 </div>
               </div>
             </div><!-- # Faq item-->
@@ -613,7 +412,7 @@
   </section><!-- End Frequently Asked Questions Section -->
 
   <!-- ======= Recent Blog Posts Section ======= -->
-  <section id="recent-posts" class="recent-posts sections-bg">
+  <section id="recent-posts" class="recent-posts">
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
@@ -657,7 +456,7 @@
   </section><!-- End Recent Blog Posts Section -->
 
   <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
+  {{-- <section id="contact" class="contact">
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
@@ -733,7 +532,8 @@
       </div>
 
     </div>
-  </section><!-- End Contact Section -->
+  </section> --}}
+  <!-- End Contact Section -->
 
 </main><!-- End #main -->
 

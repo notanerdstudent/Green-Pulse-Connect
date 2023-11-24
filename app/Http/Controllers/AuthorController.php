@@ -113,7 +113,7 @@ class AuthorController extends Controller
             'post_title' => 'required|unique:posts,post_title',
             'post_content' => 'required',
             'post_category' => 'required|exists:subcategories,id',
-            'featured_image' => 'required|image|mimes:jpg,jpeg,png|max:1024',
+            'featured_image' => 'required|image|mimes:jpg,jpeg,png|max:10240',
         ]);
 
         $path = 'images/post_images/';
@@ -174,7 +174,7 @@ class AuthorController extends Controller
                 'post_title' => 'required|unique:posts,post_title,' . $request->post_id,
                 'post_content' => 'required',
                 'post_category' => 'required|exists:subcategories,id',
-                'featured_image' => 'required|image|mimes:jpg,jpeg,png|max:1024',
+                'featured_image' => 'required|image|mimes:jpg,jpeg,png|max:10240',
             ]);
 
             $path = "images/post_images/";
@@ -332,7 +332,7 @@ class AuthorController extends Controller
             'brand' => 'required',
             'purchase_url' => 'required',
             'product_rating' => 'required',
-            'product_image' => 'required|image|mimes:jpg,jpeg,png|max:1024',
+            'product_image' => 'required|image|mimes:jpg,jpeg,png|max:10240',
         ]);
 
         $path = 'images/product_images/';
@@ -396,7 +396,7 @@ class AuthorController extends Controller
                 'brand' => 'required',
                 'purchase_url' => 'required',
                 'product_rating' => 'required',
-                'product_image' => 'required|image|mimes:jpg,jpeg,png|max:1024',
+                'product_image' => 'required|image|mimes:jpg,jpeg,png|max:10240',
             ]);
 
             $path = "images/product_images/";

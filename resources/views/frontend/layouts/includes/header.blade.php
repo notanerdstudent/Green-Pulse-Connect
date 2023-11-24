@@ -52,7 +52,7 @@
               </div>
             </li>
             <li class="nav-item"> <a class="nav-link" href="{{route('business')}}">Businesses</a></li>
-            
+            <li class="nav-item"> <a class="nav-link" href="{{route('products')}}">Products</a></li>
             
             @if (Auth::check())
             <li class="nav-item"> <a class="nav-link" href="{{route('author.home')}}">Dashboard</a></li>
